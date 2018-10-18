@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "qrcli"
 
   s.add_dependency 'rqrcode'
+  # Dev dependencies in the Gemfile
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
