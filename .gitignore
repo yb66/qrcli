@@ -5,3 +5,6 @@ pkg/*
 bin/
 vendor/
 vendor.noindex/
+.yardoc/
+coverage/
+doc/
