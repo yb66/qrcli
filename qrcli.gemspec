@@ -14,7 +14,8 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "qrcli"
 
-  s.add_dependency 'rqrcode'
+  s.add_runtime_dependency 'rqrcode', ">= 0.10.1"
+  s.add_runtime_dependency "docopt",  ">= 0.6.1"
   # Dev dependencies in the Gemfile
 
   s.files         = `git ls-files`.split("\n")

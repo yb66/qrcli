@@ -1,10 +1,41 @@
 #!/usr/bin/env ruby
 
+require 'docopt'
+
+USAGE = <<USAGE
+Generates QR codes on the command line using ANSI terminal colors.
+
+Usage:
+  #{__FILE__} <text>
+  #{__FILE__} -h | --help
+  #{__FILE__} --version
+
+Arguments:
+  text        The text to turn into a QR code (pass "-" for stdin).
+  
+Options:
+  -h --help   Show this help message and exit.
+  --version   Show version and exit.
+USAGE
+
+
+begin
+  options = Docopt::docopt(USAGE, help: true, version: Qrcli::VERSION)
+rescue Docopt::Exit => e
+  puts e.message
+  exit 0
+end
+
+
 require_relative "../lib/qrcli.rb"
 
-
-text = ARGV[0] || STDIN.read
+if options["<text>"] == "-"
+  text = STDIN.read.chomp
+else
+  text = options["<text>"]
+end
 
 qr = Qrcli::QR.minimal(text, :level => 'l')
 puts qr.format
 
+exit 0

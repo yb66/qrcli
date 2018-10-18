@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Documentation.
 - This changelog.
 - An MIT licence.
+- Docopt for the cli.
 
 ## [v0.0.1]
 
