@@ -7,6 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Qrcli::VERSION
   s.authors     = ["John Hawthorn"]
   s.email       = ["john.hawthorn@gmail.com"]
+  s.licenses    = ['MIT']
   s.homepage    = "https://github.com/jhawthorn/qrcli"
   s.summary     = %q{Generates QR codes on the command line using ANSI terminal colors}
   s.description = %q{Generates QR codes on the command line using ANSI terminal colors}
